@@ -1,7 +1,6 @@
 # import custom libraries
 from std import sys
 from Modules import getbuildinfo
-from Parser import token
 from utils import format
 
 # defining a variable in a function is local to the function
