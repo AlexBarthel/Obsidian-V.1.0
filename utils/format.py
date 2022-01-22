@@ -9,8 +9,8 @@ def format(file):
             content.append(f.readlines());
         content = content[0];
 		# remove '\n' from the end of each line
-        for lineno in range(0, len(content)):
-            content[lineno] = content[lineno].strip('\n');
+        # for lineno in range(0, len(content)):
+        #     content[lineno] = content[lineno].strip('\n');
 		# return content
         return content;
     except FileNotFoundError:
