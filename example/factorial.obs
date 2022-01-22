@@ -1,0 +1,3 @@
+use std/math;
+
+display math.factorial(10);

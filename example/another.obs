@@ -1,0 +1,8 @@
+int myInt: 1;
+float myFl: 1.1;
+String myStr: 'Hello';
+Boolean myBool: True;
+ArrayList myArr: [1,2,3];
+void addInts(int a, int b) {
+    display a + b;
+}

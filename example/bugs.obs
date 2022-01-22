@@ -1,0 +1,9 @@
+float c: 4.0;
+int c 4;
+int d: (1 + 4);
+
+void myFunc(a, b) {
+    display a + b;
+}
+
+ArrayList AAAAAAAAAA: [1, 2, 3];

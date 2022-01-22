@@ -1,0 +1,29 @@
+* add two floating point numbers
+float fAdd(float a, float b) {
+    return a + b;
+}
+
+* import the nums library
+use std/nums;
+
+* reverse the order of an array
+ArrayList reverse(array) {
+    ArrayList reversed: [];
+    for (int i : array.length-1; i >= 0; i --) {
+        reversed.push(array[i]);
+    }
+    return reversed;
+}
+
+* the main function
+void main() {
+
+    display fAdd(4.0, 3.7);
+
+    float a: 7.8;
+    float b: 2.1;
+    float myFloat: fAdd(a, b);
+
+    ArrayList myReverse: reverse([1, 4, 7, 9]);
+    display myReverse;
+}
