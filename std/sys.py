@@ -25,3 +25,4 @@ def println(values, e):
 
 def RAISE_SYNTAX_ERROR(error, o):
     print(f"SyntaxError: {error} \n\t{o}");
+
