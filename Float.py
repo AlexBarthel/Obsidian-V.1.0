@@ -1,2 +1,3 @@
 def parseFloat(o):
-    return o.replace('.', '', 1).isdigit();
+    try: return o.replace('.', '', 1).isdigit();
+    except: return False;

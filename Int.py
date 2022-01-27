@@ -1,2 +1,3 @@
 def parseInt(o):
-    return o.isdigit()
+    try: return o.isdigit();
+    except: return False;

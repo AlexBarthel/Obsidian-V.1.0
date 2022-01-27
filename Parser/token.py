@@ -59,7 +59,9 @@ def ObsToken_OneChar(c1):
         # variable name, value, function name
         # myFunction(a,
         return f'NAME({c1})';
-    return _ObsParser_TokenNames[c1];
+    if c1 != "\n":
+        return _ObsParser_TokenNames[c1]+f"({c1})";
+    else: return _ObsParser_TokenNames[c1]+f"(\\n)";
 
 
 # for character in line:
