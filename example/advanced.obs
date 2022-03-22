@@ -1,0 +1,40 @@
+vector2 createVector(float x, float y) {
+	return new vector2(x, y);
+}
+* lerp function
+vector2 lerp(vector2 p0, vector2 p1, float t) {
+	float x: p0.x + (p1.x - p0.x) * t;
+    float y: p0.y + (p1.y - p0.y) * t;
+    return createVector(this.x, this.y);
+}
+* quadratic bezier curve
+vector2 quadratic(vector2 p0, vector2 p1, vector2 p2, float t) {
+    vector2 pos1: lerp(p0, p1, t);
+    vector2 pos2: lerp(p1, p2, t);
+    return lerp(pos1, pos2, t);
+}
+* normal (cubic) bezier curve
+vector2 cubic(vector2 p0, vector2 p1, vector2 p2, vector2 p3, float t) {
+    vector2 pos1: quadratic(p0, p1, p2, t);
+    vector2 pos2: quadratic(p1, p2, p3, t);
+    return lerp(pos1, pos2, t);
+}
+* advanced (quartic) bezier curve
+vector2 quartic(vector2 p0, vector2 p1, vector2 p2, vector2 p3, vector2 p4, float t) {
+    vector2 pos1: cubic(p0, p1, p2, p3, t);
+    vector2 pos2: cubic(p1, p2, p3, p4, t);
+    return lerp(pos1, pos2, t);
+}
+
+vector2 p0: createVector(0, 200);
+vector2 p1: createVector(100, 400);
+vector2 p2: createVector(200, 0);
+vector2 p3: createVector(300, 100);
+vector2 p4: createVector(400, 200);
+float delta: 0.05;
+void main() {
+	for (float t: 0; t <= 1; t += delta) {
+        vector2 v: quartic(p0, p1, p2, p3, p4, t);
+        display (v.x + " : " + v.y);
+    }
+}

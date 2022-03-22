@@ -1,3 +1,4 @@
+print(f'{str(__file__).replace("/", ".")[1:]} imported')
 # import custom libraries
 from std import sys
 from Modules import getbuildinfo
@@ -31,17 +32,14 @@ class obsidian():
         # default return value for __init__
         return None
 
-    def lex_line(self, line):
+    def _lex_line(self, line):
         # code here to lex a line, and return the tokens from that line
-        global LEX_BUFFER, LEX_TOKENS
-        LEX_BUFFER = ''
-        LEX_TOKENS = []
-        LEX_STRING = False
-        LEX_SYMBOLS = '+-/*%<>!:;()[]{},'
-        LEX_COMPARISONS = [
-            '==', '!=', '<=', '>=', '+=', '-=', '*=', '/=', '++', '--', '&&',
-            '||'
-        ]
+        global LEX_BUFFER, LEX_TOKENS;
+        LEX_BUFFER = '';
+        LEX_TOKENS = [];
+        LEX_STRING = False;
+        LEX_SYMBOLS = '+-/*%<>!:;()[]{},';
+        LEX_COMPARISONS = ['==', '!=', '<=', '>=', '+=', '-=', '*=', '/=', '++', '--', '&&', '||'];
 
         def flushBuffer():
             global LEX_BUFFER, LEX_TOKENS
@@ -72,8 +70,7 @@ class obsidian():
             elif character in LEX_SYMBOLS:
                 flushBuffer()
                 if index < len(line) - 1:  #if not at end of line
-                    if line[index:index +
-                            2] in LEX_COMPARISONS:  #if this+next char is a 2-char symbol
+                    if line[index:index+2] in LEX_COMPARISONS:  #if this+next char is a 2-char symbol
                         LEX_TOKENS.append(line[index:index + 2])
                         index += 1
                     else:
@@ -90,11 +87,10 @@ class obsidian():
 
     def lex(self):
 		# Issues:
-		# Comments putting text on newlines when it's not supposed too.
-		# ...
+		# Lexer won't seperate quotes from strings into tokens.
         for line in range(len(self.file)):
-            lexed_line = self.lex_line(self.file[line]);
-            print(line, end="\t| ")
+            lexed_line = self._lex_line(self.file[line]);
+            print(line+1, end="\t| ")
             for t in lexed_line:
                 print(token.ObsToken_OneChar(t), end=" ");
             print()

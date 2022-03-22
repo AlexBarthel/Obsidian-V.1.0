@@ -1,3 +1,4 @@
+print(f'{str(__file__).replace("/", ".")[1:]} imported')
 # pseudo
 
 

@@ -1,10 +1,12 @@
+print(f'{str(__file__).replace("/", ".")[1:]} imported')
 # import custom libraries
-from std import sys
-import Boolean
-import String
-import ArrayList
-import Float
-import Int
+from Modules import (
+	Int, 
+	Float, 
+	String, 
+	Boolean, 
+	ArrayList
+)
 
 # Token names
 
@@ -35,6 +37,7 @@ _ObsParser_TokenNames = {
     'int': 'INT', 'float': 'FLOAT',
     'String': 'STRING', 'Boolean': 'BOOLEAN',
     'ArrayList': 'ARRAYLIST', 'void': 'VOID',
+	'vector2': 'VECTOR2', 'vector3': 'VECTOR3',
     # conditionals
     'if': 'IF', 'else': 'ELSE',
     # loops
@@ -63,8 +66,3 @@ def ObsToken_OneChar(c1):
         return _ObsParser_TokenNames[c1]+f"({c1})";
     else: return _ObsParser_TokenNames[c1]+f"(\\n)";
 
-
-# for character in line:
-#   if character is letter:
-#     #variable type,          name,            function name
-#     # space       , (colon, space, operator), parentheses
