@@ -1,4 +1,3 @@
-print(f'{str(__file__).replace("/", ".")[1:]} imported')
 # import custom libraries
 from std import sys
 from std import nums

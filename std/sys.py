@@ -1,4 +1,3 @@
-print(f'{str(__file__).replace("/", ".")[1:]} imported')
 # import custom libraries
 from Modules import lex
 

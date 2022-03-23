@@ -1,4 +1,3 @@
-print(f'{str(__file__).replace("/", ".")[1:]} imported')
 # import custom libraries
 from std import sys
 from Modules import getbuildinfo
@@ -90,8 +89,8 @@ class obsidian():
 		# Lexer won't seperate quotes from strings into tokens.
         for line in range(len(self.file)):
             lexed_line = self._lex_line(self.file[line]);
-            print(line+1, end="\t| ")
-            for t in lexed_line:
-                print(token.ObsToken_OneChar(t), end=" ");
-            print()
+            # print(line+1, end="\t| ")
+            # for t in lexed_line:
+            #     print(token.ObsToken_OneChar(t), end=" ");
+            # print()
         return

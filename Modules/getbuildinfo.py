@@ -1,4 +1,3 @@
-print(f'{str(__file__).replace("/", ".")[1:]} imported')
 GITVERSION = 0.1;
 GITTAG     = 'default';
 buildinfo = {
