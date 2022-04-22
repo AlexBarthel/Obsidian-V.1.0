@@ -1,32 +1,18 @@
 # Obsidian V.1.0
 
-## Table of Contents
+### What is Obsidian?
 
-1. Language Summary
-2. Syntax
-3. Contributors
-4. Files
-5. Modules
-6. TODO List
-
----
-
-### Language Summary
-Obsidian  has numerous features and functions which come from a mix of C#,
-Java, and Python. Obsidian was created as a way to experience all of the
-great features from some of the most popular languages, in a relatively
-simple way. Obsidian (obs for short) has many benefits including easy-to-learn,
-easy-to-read, high portability, and OOP. Obsidian is a unique and easy-to-learn
-programming language for programmers of all skill levels.
+Obsidian combines the best features from C, Java, and Python to produce
+a simple but efficient programming language. Obsidian was designed to
+the most difficult to understand programs, readable. Its syntax provides
+a very descriptive view of how the program works. Obsidian is portable,
+object-oriented, and for programmers of all skill levels.
 
 ---
 
 ### Syntax
 | Token | Description | Example |
 |--|--|--|
-|`int`|Any number of decimal digits.|`12` `22` `37`|
-|`String`|Any number of characters in between two double/single quotes.|`"hello"` `'world'`|
-|`Symbol`|Any character that isn't alphanumeric.|`*` `+` `%`|
 |`Newline`|A line break character.|`\n`|
 |`Comment`|An asterisk `*` followed by any alphanumeric or symbol combination.|`* Test`<br>`* Hello`|
 |`(` `)`|Left `(` or right `)` parentheses. Delimeter.|`(` `)`|
