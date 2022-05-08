@@ -32,7 +32,11 @@ vector2 p2: createVector(200, 0);
 vector2 p3: createVector(300, 100);
 vector2 p4: createVector(400, 200);
 float delta: 0.05;
-void main() {
+
+* pass in arguments by running the program like this:
+* obsidian main.obs [sysargs -> ArrayList]
+void main(ArrayList sysargs) {
+	display sysargs[0];
 	for (float t: 0; t <= 1; t += delta) {
         vector2 v: quartic(p0, p1, p2, p3, p4, t);
         display (v.x + " : " + v.y);

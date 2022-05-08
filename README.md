@@ -3,7 +3,7 @@
 ### What is Obsidian?
 
 Obsidian combines the best features from C, Java, and Python to produce
-a simple but efficient programming language. Obsidian was designed to
+a simple but efficient programming language. Obsidian was designed to make
 the most difficult to understand programs, readable. Its syntax provides
 a very descriptive view of how the program works. Obsidian is portable,
 object-oriented, and for programmers of all skill levels.
@@ -17,7 +17,7 @@ object-oriented, and for programmers of all skill levels.
 |`Comment`|An asterisk `*` followed by any alphanumeric or symbol combination.|`* Test`<br>`* Hello`|
 |`(` `)`|Left `(` or right `)` parentheses. Delimeter.|`(` `)`|
 |`[` `]`|Left `[` or right `]` square brackets. Delimeter.|`[` `]`|
-|`{` `}`|Left `{` or right `}` curly braces. Delimeter.|`int {}`|
+|`{` `}`|Left `{` or right `}` curly braces. Delimeter.|`{` `}`|
 
 1. Indentation in obs doesn't matter. Since obs uses curly braces to enclose certain scopes of code, indentation isn't important.
 2. Writing a data type before a variable is extremely important to the parser so that it knows what type of variable your variable is. And if your variable value does not match the type, then it will throw an error.

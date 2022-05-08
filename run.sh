@@ -2,7 +2,7 @@ clear -x
 python3 obsidian_installer.py
 # clear -x
 bash obsidian_updater.sh
-clear -x
+# clear -x
 
 today=$(TZ=":US/Eastern" date)
 repo=$(basename -s .git `git config --get remote.origin.url`)

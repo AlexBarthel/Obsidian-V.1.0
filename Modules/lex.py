@@ -47,21 +47,25 @@ class obsidian():
             LEX_BUFFER = ''
 
         index = 0
+        quote_type = ""
         while index < len(line):
             character = line[index]
             # Strings
-            if character == '"' and not LEX_STRING:
+            if (character == '"' or character == "'") and not LEX_STRING:
                 flushBuffer()
+                quote_type = character
                 LEX_BUFFER += character
                 LEX_STRING = True
+                index += 1
                 continue
             if LEX_STRING:
-                if character == '"':
+                if character == quote_type:
                     LEX_BUFFER += character
                     flushBuffer()
                     LEX_STRING = False
                 else:
                     LEX_BUFFER += character
+                index += 1
                 continue
 
             if character == " ":
@@ -89,8 +93,8 @@ class obsidian():
 		# Lexer won't seperate quotes from strings into tokens.
         for line in range(len(self.file)):
             lexed_line = self._lex_line(self.file[line]);
-            # print(line+1, end="\t| ")
-            # for t in lexed_line:
-            #     print(token.ObsToken_OneChar(t), end=" ");
-            # print()
+            print(line+1, end="\t| ")
+            for t in lexed_line:
+                print(token.ObsToken_OneChar(t), end=" ");
+            print()
         return

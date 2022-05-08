@@ -33,10 +33,10 @@ _ObsParser_TokenNames = {
     '++': 'PLUSPLUS', '--': 'MINUSMINUS',
     '&&': 'AND', '||': 'OR',
     # data types
-    'int': 'INT', 'float': 'FLOAT',
-    'String': 'STRING', 'Boolean': 'BOOLEAN',
-    'ArrayList': 'ARRAYLIST', 'void': 'VOID',
-	'vector2': 'VECTOR2', 'vector3': 'VECTOR3',
+    'int': 'tINT', 'float': 'tFLOAT',
+    'String': 'tSTRING', 'Boolean': 'tBOOLEAN',
+    'ArrayList': 'tARRAYLIST', 'void': 'tVOID',
+	'vector2': 'tVECTOR2', 'vector3': 'tVECTOR3',
     # conditionals
     'if': 'IF', 'else': 'ELSE',
     # loops

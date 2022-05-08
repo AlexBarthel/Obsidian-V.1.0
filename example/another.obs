@@ -1,8 +1,14 @@
 int myInt: 1;
 float myFl: 1.1;
 String myStr: 'Hello';
-Boolean myBool: True;
-ArrayList myArr: [1,2,3];
+Boolean myBool: true;
+ArrayList myArr: [
+  [1, 0, 0],
+  [0, 1, 0],
+  [1, 1, 1]
+];
 void addInts(int a, int b) {
     display a + b;
 }
+
+
